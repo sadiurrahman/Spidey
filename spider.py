@@ -82,12 +82,12 @@ def download(url):
    #                 fd.write(str(r.status_code)+'...'+url+'\n')
     except:
         with open('logs.txt','a') as fd:
-            fd.write('...'+url+'\n')
+            fd.write('....'+url+'\n')
         try:
             storage.pop(storage.index(url))
         except:
             pass
-        print('####--',url, '--cant download moving ahead')
+        print('#####---',url, '--cant download moving ahead')
 
 #traverses given url and stores all of them in list
 def links(url):
@@ -147,7 +147,7 @@ if __name__=="__main__":
                 temp = temp + l[1]
                 print (temp , store)
             a_count = count
-            print('\ncompleted level ' , j+1,'\n')
+            print('\ncompleted success level ' , j+1,'\n')
 
 
 
