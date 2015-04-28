@@ -64,10 +64,10 @@ def download(url):
                     except:
                         pass
                 with open(file_Name, 'wb') as fd:
-                    print('downloding .. ', url)
-                    print('Current level '+str(j), a_levels,levels)
-                    print('Current count '+str(i),a_count, count)
-                    print('Total count '+str(count))
+                    print('downloding ... ', url)
+                    print('Current level is'+str(j), a_levels,levels)
+                    print('Current count is '+str(i),a_count, count)
+                    print('Total count is '+str(count))
                     for chunk in r.iter_content(chunk_size=1024):
                         if chunk:
                             done += len(chunk)
@@ -87,7 +87,7 @@ def download(url):
             storage.pop(storage.index(url))
         except:
             pass
-        print('#####---',url, '--cant download moving ahead')
+        print('#######-----',url, '--cant download moving ahead')
 
 #traverses given url and stores all of them in list
 def links(url):
