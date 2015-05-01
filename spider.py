@@ -36,7 +36,7 @@ def download(url):
                         url=url1
                         r = requests.get(url, stream=True,timeout=10)
 #            if(r.status_code==200):
-            print('in download', url)
+            print('in downloading', url)
             file_str = url.split('//')[1].split('/')
             l1 = len(file_str)
             file_Name = url.split('/')[-1]
@@ -65,9 +65,9 @@ def download(url):
                         pass
                 with open(file_Name, 'wb') as fd:
                     print('downloding ... ', url)
-                    print('Current level is'+str(j), a_levels,levels)
-                    print('Current count is '+str(i),a_count, count)
-                    print('Total count is '+str(count))
+                    print('The Current level is'+str(j), a_levels,levels)
+                    print('The Current count is '+str(i),a_count, count)
+                    print('The Total count is '+str(count))
                     for chunk in r.iter_content(chunk_size=1024):
                         if chunk:
                             done += len(chunk)
@@ -147,7 +147,7 @@ if __name__=="__main__":
                 temp = temp + l[1]
                 print (temp , store)
             a_count = count
-            print('\ncompleted success level ' , j+1,'\n')
+            print('\n completed and the success level is ' , j+1,'\n')
 
 
 
